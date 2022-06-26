@@ -59,4 +59,28 @@ Post.init(
     }
 );
 
+// seeds
+// Post.bulkCreate([
+//     {
+//         title: 'Good Evening',
+//         post_url: 'google.com',
+//         user_id: 1
+//     },
+//     {
+//         title: 'Good Evening',
+//         post_url: 'google.com',
+//         user_id: 1
+//     },
+//     {
+//         title: 'Good Evening',
+//         post_url: 'google.com',
+//         user_id: 1
+//     },
+//     {
+//         title: 'Good Evening',
+//         post_url: 'google.com',
+//         user_id: 1
+//     }
+// ])
+
 module.exports = Post
