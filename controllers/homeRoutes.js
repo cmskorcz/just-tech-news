@@ -35,7 +35,8 @@ router.get('/', (req, res) => {
     })
     .then(dbPostData => {
         const posts = dbPostData.map(post => post.get({ plain: true }));
-        res.render('homepage', { posts });
+        const loggedIn = req.session.loggedIn;
+        res.render('homepage', { posts, loggedIn });
     })
     .catch(err => {
         console.log(err)
@@ -84,7 +85,8 @@ router.get('/post/:id', (req, res) => {
             return;
         }
         const post = dbPostData.get({ plain: true });
-        res.render('single-post', { post })
+        const loggedIn = req.session.loggedIn;
+        res.render('single-post', { post, loggedIn })
     })
     .catch(err => {
         console.log(err);
